@@ -17,7 +17,6 @@ import {
 } from 'layouts/Project';
 import { Fragment } from 'react';
 import styles from './Uses.module.css';
-
 export const Uses = () => {
   return (
     <Fragment>
