@@ -1,12 +1,12 @@
 import gamestackTexture2Large from 'assets/logo.png';
 import gamestackTexture2Placeholder from 'assets/gamestack-list-placeholder.jpg';
-import gamestackTexture2 from 'assets/gamestack-list.jpg';
-import gamestackTextureLarge from 'assets/gamestack-login-large.jpg';
+import gamestackTexture2 from 'assets/logo.png';
+import gamestackTextureLarge from 'assets/Ub.jpg';
 import gamestackTexturePlaceholder from 'assets/gamestack-login-placeholder.jpg';
 import gamestackTexture from 'assets/Ub.jpg';
 import sliceTextureLarge from 'assets/Ub.jpg';
 import sliceTexturePlaceholder from 'assets/slice-app-placeholder.jpg';
-import sliceTexture from 'assets/slice-app.jpg';
+import sliceTexture from 'assets/playstation.jpg';
 import sprTextureLarge from 'assets/playstation.jpg';
 import sprTexturePlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
 import sprTexture from 'assets/playstation.jpg';
@@ -69,8 +69,7 @@ export const Home = () => {
     <div className={styles.home}>
       <Meta
         title=""
-        description="Design portfolio of Saz Luqman — a product designer working on web & mobile
-          apps with a focus on motion, experience design, and accessibility."
+        description="razha fixer for fix."
       />
       <Intro
         id="intro"
