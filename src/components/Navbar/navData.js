@@ -19,18 +19,13 @@ export const navLinks = [
 
 export const socialLinks = [
   {
-    label: 'Twitter',
-    url: 'https://twitter.com/hamishMW',
-    icon: 'twitter',
+    label: 'Facebook',
+    url: 'https://www.facebook.com/razhan.omed.osman?mibextid=LQQJ4d',
+    icon: 'Facebook',
   },
   {
-    label: 'Figma',
-    url: 'https://www.figma.com/@Hamish',
-    icon: 'figma',
-  },
-  {
-    label: 'Github',
-    url: 'https://github.com/HamishMW',
-    icon: 'github',
+    label: 'Snapchat',
+    url: 'https://www.snapchat.com/add/razhanomedd?invite_id=6ByFFvYT&locale=en_US&share_id=AcdVztpFS8SzVgGB4qOcuA&sid=b57eb71c513d49e9834bc7a59ce45ec3',
+    icon: 'Snapchat',
   },
 ];

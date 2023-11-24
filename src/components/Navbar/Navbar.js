@@ -1,5 +1,4 @@
 import { Icon } from 'components/Icon';
-import { Monogram } from 'components/Monogram';
 import { useTheme } from 'components/ThemeProvider';
 import { tokens } from 'components/ThemeProvider/theme';
 import { Transition } from 'components/Transition';
@@ -12,6 +11,9 @@ import { NavToggle } from './NavToggle';
 import styles from './Navbar.module.css';
 import { ThemeToggle } from './ThemeToggle';
 import { navLinks, socialLinks } from './navData';
+import Logo from 'assets/logo.png';
+import Image from 'next/image';
+
 
 export const Navbar = () => {
   const [current, setCurrent] = useState();
@@ -144,11 +146,11 @@ export const Navbar = () => {
       <RouterLink href={route === '/' ? '/#intro' : '/'} scroll={false}>
         <a
           data-navbar-item
-          className={styles.logo}
-          aria-label="Hamish Williams, Designer"
+          // className={styles.logo}
+          aria-label="razha"
           onClick={handleMobileNavClick}
         >
-          <Monogram highlight />
+          <Image src={Logo} alt="razha" objectFit='cover' width={1000} height={1000} />
         </a>
       </RouterLink>
       <NavToggle onClick={() => dispatch({ type: 'toggleMenu' })} menuOpen={menuOpen} />

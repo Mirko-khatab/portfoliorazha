@@ -36,7 +36,7 @@ export function Page404() {
                   as="h2"
                   level={3}
                 >
-                  <DecoderText text="Error: Redacted" start={visible} delay={300} />
+                  <DecoderText text="comming soon ..." start={visible} delay={300} />
                 </Heading>
                 <Text className={styles.description} data-visible={visible} as="p">
                   This page could not be found. It either doesn’t exist or was deleted. Or

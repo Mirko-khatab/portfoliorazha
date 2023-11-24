@@ -1,5 +1,5 @@
 import profileKatakana from 'assets/katakana-profile.svg?url';
-import profileImgLarge from 'assets/razhan.jpeg';
+import profileImgLarge from 'assets/Razhan.jpg';
 import profileImgPlaceholder from 'assets/profile-placeholder.jpg';
 import profileImg from 'assets/profile.jpg';
 import { Button } from 'components/Button';
@@ -21,12 +21,10 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      Welcome to my website! My name is Razhan, and im here to assist you with various PlayStation account-related services. Your gaming experience is important, and I understand that unforeseen issues can sometimes arise. Here are the services I provide:
+      Welcome to my website! My name is Razhan, and im here to assist you with various PlayStation account-related services. Your gaming experience is important
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      In my spare time I like to practice Brazilian Jiu Jitsu, play video games, and{' '}
-      I’m always down for hearing
-      about new projects, so feel free to drop me a line.
+      and I understand that unforeseen issues can sometimes arise. Here are the services I provide:
     </Text>
   </Fragment>
 );
