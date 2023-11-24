@@ -11,8 +11,6 @@ import { NavToggle } from './NavToggle';
 import styles from './Navbar.module.css';
 import { ThemeToggle } from './ThemeToggle';
 import { navLinks, socialLinks } from './navData';
-import Logo from 'assets/logo.png';
-import Image from 'next/image';
 
 
 export const Navbar = () => {
@@ -143,16 +141,7 @@ export const Navbar = () => {
 
   return (
     <header className={styles.navbar} ref={headerRef}>
-      <RouterLink href={route === '/' ? '/#intro' : '/'} scroll={false}>
-        <a
-          data-navbar-item
-          // className={styles.logo}
-          aria-label="razha"
-          onClick={handleMobileNavClick}
-        >
-          <Image src={Logo} alt="razha" objectFit='cover' width={1000} height={1000} />
-        </a>
-      </RouterLink>
+  
       <NavToggle onClick={() => dispatch({ type: 'toggleMenu' })} menuOpen={menuOpen} />
       <nav className={styles.nav}>
         <div className={styles.navList}>

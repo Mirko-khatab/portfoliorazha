@@ -135,9 +135,9 @@ recovery account your email not verify"
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="Biomedical image collaboration"
+        title="ubisoft connect"
         description="
-        Increasing the amount of collaboration in Slice, an app for biomedical imaging"
+        Ubisoft Connect is a digital distribution, digital rights management, multiplayer and communications service developed by Massive Entertainment to provide an experience similar to the achievements/trophies"
         buttonText="View project"
         buttonLink="/projects/slice"
         model={{
