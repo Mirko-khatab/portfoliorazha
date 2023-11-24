@@ -11,8 +11,6 @@ import { NavToggle } from './NavToggle';
 import styles from './Navbar.module.css';
 import { ThemeToggle } from './ThemeToggle';
 import { navLinks, socialLinks } from './navData';
-import Logo from 'assets/logo.png';
-import Image from 'next/image';
 
 
 export const Navbar = () => {
@@ -150,8 +148,6 @@ export const Navbar = () => {
           aria-label="razha"
           onClick={handleMobileNavClick}
         >
-          <Image     loader: 'akamai'
- src={Logo} alt="razha" objectFit='cover' width={1000} height={1000} />
         </a>
       </RouterLink>
       <NavToggle onClick={() => dispatch({ type: 'toggleMenu' })} menuOpen={menuOpen} />
