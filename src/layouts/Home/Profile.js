@@ -14,25 +14,30 @@ import { Transition } from 'components/Transition';
 import { Fragment, useState } from 'react';
 import { media } from 'utils/style';
 import styles from './Profile.module.css';
+import { useTranslation } from 'react-i18next';
 
-const ProfileText = ({ visible, titleId }) => (
-  <Fragment>
-    <Heading className={styles.title} data-visible={visible} level={3} id={titleId}>
-      <DecoderText text="Hi there" start={visible} delay={500} />
-    </Heading>
-    <Text className={styles.description} data-visible={visible} size="l" as="p">
-      Welcome to my website! My name is Razhan, and im here to assist you with various PlayStation account-related services. Your gaming experience is important
-    </Text>
-    <Text className={styles.description} data-visible={visible} size="l" as="p">
-      and I understand that unforeseen issues can sometimes arise. Here are the services I provide:
-    </Text>
-  </Fragment>
-);
+
+
 
 export const Profile = ({ id, visible, sectionRef }) => {
   const [focused, setFocused] = useState(false);
   const titleId = `${id}-title`;
+  const { t: translate } = useTranslation();
 
+
+  const ProfileText = ({ visible, titleId }) => (
+
+    <Fragment>
+      <Heading className={styles.title} data-visible={visible} level={3} id={titleId}>
+        <DecoderText text={translate('about.hi')}
+          start={visible} delay={500} />
+      </Heading>
+      <Text className={styles.description} data-visible={visible} size="l" as="p">
+        {translate('about.title')}
+      </Text>
+
+    </Fragment>
+  );
   return (
     <Section
       className={styles.profile}
@@ -78,7 +83,6 @@ export const Profile = ({ id, visible, sectionRef }) => {
                   placeholder={profileImgPlaceholder}
                   srcSet={[profileImg, profileImgLarge]}
                   sizes={`(max-width: ${media.mobile}px) 100vw, 480px`}
-                  alt="Me standing in front of the Torii on Miyajima, an island off the coast of Hiroshima in Japan"
                 />
                 <svg
                   aria-hidden="true"

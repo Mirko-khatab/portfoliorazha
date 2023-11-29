@@ -1,0 +1,44 @@
+{
+  "translation": {      
+        "Features": "Features",
+        "Clients": "Clients",
+        "System": "System"
+      
+
+      ,"HERO": {
+        "title": "Do your calculations with a few clicks",
+        "content": "Welcome to the planet of lightning here is 2050 we have seen all your obstacles we have solved hurry up contact us scroll down and participate in this journey of our planet"
+        ,"button": "Try Now"
+        ,"play": "Play Video"
+      },
+
+       "Slider": {
+        "title": "The pride of Bruska",
+        "description": "more than +100 companies trust us"
+    
+      },
+        "Video":{
+        "title": "Bruska Tutuorial"
+    
+      },
+        "FormValue":{
+                  "title":"ئەتەوێ بروسکە تاقی کەیتەوە پەلەبکەو ئەم فۆڕمە پڕکەرەوە",
+
+        "name":"ناو",
+        "email":"ئیمەیل",
+        "phone":"ژمارەی مۆبایل",
+        "city":"شار",
+        "address":"ناونیشان",
+        "companySize":"قەبارەی کۆمپانیا"
+      }
+      ,  "Faq":{
+        "title": "Frequently Asked Questions about Bruska"
+    
+      
+      },
+            "direction": "ltr" 
+
+
+  }
+
+}

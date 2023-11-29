@@ -13,6 +13,9 @@ import { useRouter } from 'next/router';
 import { Fragment, createContext, useEffect, useReducer } from 'react';
 import { msToNum } from 'utils/style';
 import { ScrollRestore } from '../layouts/App/ScrollRestore';
+import { I18nextProvider } from "react-i18next";
+import i18n from '../lang/index';
+
 
 export const AppContext = createContext({});
 
@@ -38,49 +41,52 @@ const App = ({ Component, pageProps }) => {
   }, [storedTheme]);
 
   return (
-    <AppContext.Provider value={{ ...state, dispatch }}>
-      <ThemeProvider themeId={state.theme}>
-        <LazyMotion features={domAnimation}>
-          <Fragment>
-            <Head>
-              <link
-                rel="canonical"
-                href={`${process.env.NEXT_PUBLIC_WEBSITE_URL}${canonicalRoute}`}
-              />
-            </Head>
-            <VisuallyHidden
-              showOnFocus
-              as="a"
-              className={styles.skip}
-              href="#MainContent"
-            >
-              Skip to main content
-            </VisuallyHidden>
-            <Navbar />
-            <main className={styles.app} tabIndex={-1} id="MainContent">
-              <AnimatePresence exitBeforeEnter>
-                <m.div
-                  key={route}
-                  className={styles.page}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{
-                    type: 'tween',
-                    ease: 'linear',
-                    duration: msToNum(tokens.base.durationS) / 1000,
-                    delay: 0.1,
-                  }}
-                >
-                  <ScrollRestore />
-                  <Component {...pageProps} />
-                </m.div>
-              </AnimatePresence>
-            </main>
-          </Fragment>
-        </LazyMotion>
-      </ThemeProvider>
-    </AppContext.Provider>
+    <I18nextProvider i18n={i18n}>
+
+      <AppContext.Provider value={{ ...state, dispatch }}>
+        <ThemeProvider themeId={state.theme}>
+          <LazyMotion features={domAnimation}>
+            <Fragment>
+              <Head>
+                <link
+                  rel="canonical"
+                  href={`${process.env.NEXT_PUBLIC_WEBSITE_URL}${canonicalRoute}`}
+                />
+              </Head>
+              <VisuallyHidden
+                showOnFocus
+                as="a"
+                className={styles.skip}
+                href="#MainContent"
+              >
+                Skip to main content
+              </VisuallyHidden>
+              <Navbar />
+              <main className={styles.app} tabIndex={-1} id="MainContent">
+                <AnimatePresence exitBeforeEnter>
+                  <m.div
+                    key={route}
+                    className={styles.page}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{
+                      type: 'tween',
+                      ease: 'linear',
+                      duration: msToNum(tokens.base.durationS) / 1000,
+                      delay: 0.1,
+                    }}
+                  >
+                    <ScrollRestore />
+                    <Component {...pageProps} />
+                  </m.div>
+                </AnimatePresence>
+              </main>
+            </Fragment>
+          </LazyMotion>
+        </ThemeProvider>
+      </AppContext.Provider>
+    </I18nextProvider>
   );
 };
 export default App;

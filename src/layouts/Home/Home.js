@@ -1,9 +1,9 @@
-import gamestackTexture2Large from 'assets/logo.png';
+import gamestackTexture2Large from 'assets/epicgame.jpg';
 import gamestackTexture2Placeholder from 'assets/gamestack-list-placeholder.jpg';
-import gamestackTexture2 from 'assets/logo.png';
-import gamestackTextureLarge from 'assets/Ub.jpg';
+import gamestackTexture2 from 'assets/epicgame.jpg';
+import gamestackTextureLarge from 'assets/epicgame.jpg';
 import gamestackTexturePlaceholder from 'assets/gamestack-login-placeholder.jpg';
-import gamestackTexture from 'assets/Ub.jpg';
+import gamestackTexture from 'assets/epicgame.jpg';
 import sliceTextureLarge from 'assets/Ub.jpg';
 import sliceTexturePlaceholder from 'assets/slice-app-placeholder.jpg';
 import sliceTexture from 'assets/playstation.jpg';
@@ -17,8 +17,8 @@ import { Profile } from 'layouts/Home/Profile';
 import { ProjectSummary } from 'layouts/Home/ProjectSummary';
 import { useEffect, useRef, useState } from 'react';
 import styles from './Home.module.css';
+import { useTranslation } from 'react-i18next';
 
-const disciplines = ['Prototyper', 'Animator', 'Illustrator', 'Modder'];
 
 export const Home = () => {
   const [visibleSections, setVisibleSections] = useState([]);
@@ -28,6 +28,12 @@ export const Home = () => {
   const projectTwo = useRef();
   const projectThree = useRef();
   const details = useRef();
+
+  const { t: translate } = useTranslation();
+
+  const disciplines = ["PlayStation", "Epic games account", "Ubisoft"];
+
+
 
   useEffect(() => {
     const sections = [intro, projectOne, projectTwo, projectThree, details];
@@ -83,12 +89,7 @@ export const Home = () => {
         visible={visibleSections.includes(projectOne.current)}
         index={1}
         title="Playstation account"
-        description="Recovery of hacked account recovery stolen account
-recovery date of birth account
-recovery locked password account
-refund money account account 
-Refund your account when you don't like the game or make a mistake
-"
+        description={translate('section1.title')}
         model={{
           type: 'laptop',
           alt: 'Smart Sparrow lesson builder',
@@ -106,16 +107,12 @@ Refund your account when you don't like the game or make a mistake
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="recover account inactive"
-        description="Recovery of hacked account
-recovery stolen account
-epic games account second link for PlayStation or xbox
-recover account you not have access email
-recovery account your email not verify"
+        title="Epic games account"
+        description={translate('section2.title')}
         buttonText="View website"
         buttonLink="https://gamestack.hamishw.com"
         model={{
-          type: 'phone',
+          type: 'laptop',
           alt: 'App login screen',
           textures: [
             {
@@ -135,8 +132,7 @@ recovery account your email not verify"
         visible={visibleSections.includes(projectThree.current)}
         index={3}
         title="ubisoft connect"
-        description="
-        Ubisoft Connect is a digital distribution, digital rights management, multiplayer and communications service developed by Massive Entertainment to provide an experience similar to the achievements/trophies"
+        description={translate('section3.title')}
         buttonText="View project"
         buttonLink="/projects/slice"
         model={{
